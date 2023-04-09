@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Номера заканчивающиеся на  988</title>
+</head>
+<body>
+    <h1>Номера заканчивающиеся на  985</h1>
+    <ul>
+        {% for number in numbers %}
+        <li>{{ number.phone_number }}</li>
+        {% empty %}
+        <li>No numbers found</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
