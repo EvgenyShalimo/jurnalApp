@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.db import connection
 from .fake_data import generate_fake_persons
 from .models import Person
+from tablib import Dataset
+from .resources import PersonResource
 
 def generate_fake_data(request):
     generate_fake_persons(10)
@@ -24,6 +26,7 @@ def ends_with_nine_eight_five(request):
 def all_numbers(request):
     numbers = Person.objects.all()
     return render(request, 'all_nubmers.html', {'numbers': numbers})
+
 
 
 
